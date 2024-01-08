@@ -3,9 +3,14 @@
   "name": "link-click-checker",
   "version": "1.0",
   "description": "Vue3でChrome拡張を作成したサンプルです。",
-  "permissions": ["activeTab", "scripting", "tabs"],
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
   "action": {
     "default_popup": "index.html"
+  },
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
   },
   "content_scripts": [
     {

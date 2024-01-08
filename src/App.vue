@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav>
-  </header>
+  </header> -->
   <main>
     <RouterView />
   </main>
@@ -30,10 +30,11 @@ header {
   padding: 5px;
 }
 
-nav>* {
+nav > * {
   padding-right: 5px;
 }
 
 main {
   padding: 5px;
-}</style>
+}
+</style>
