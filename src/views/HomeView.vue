@@ -35,7 +35,7 @@ const fetchDomains = async () => {
 
 <template>
   <div class="HomeView">
-    <h2>Add safe doamin</h2>
+    <h2>Add safe domain</h2>
     <input v-model="domainFormState" placeholder="safe.example.com" />
     <button @click="addSafeDomain">add</button>
     <ul>
