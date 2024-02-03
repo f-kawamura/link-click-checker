@@ -12,7 +12,12 @@ document.addEventListener("click", async function (event) {
 
   event.preventDefault();
 
-  if (await isSafeDomain(destinationDomain)) {
+  const currentDomain = window.location.hostname;
+
+  if (
+    currentDomain !== "mail.google.com" ||
+    (await isSafeDomain(destinationDomain))
+  ) {
     openTargetHref(clickedElement.href);
     return;
   }
@@ -20,6 +25,7 @@ document.addEventListener("click", async function (event) {
   var confirmResult = window.confirm(
     `💀💀💀標的型注意💀💀💀 「${destinationDomain}」は未確認のドメインです❗`
   );
+
   if (confirmResult) {
     openTargetHref(clickedElement.href);
   }
